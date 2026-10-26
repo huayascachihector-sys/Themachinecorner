@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Matemáticas Análisis y Enfoques (AA) // Compendio Táctico IB</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      color: #1e293b;
+      background: #f8fafc;
+      padding: 2.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .header-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0284c7;
+      background: #e0f2fe;
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #0f172a;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .author-bar {
+      color: #64748b;
+      font-size: 0.9rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .formula-box {
+      background: #0f172a;
+      color: #38bdf8;
+      padding: 1.2rem;
+      border-radius: 8px;
+      font-family: "JetBrains Mono", Consolas, monospace;
+      margin: 1.2rem 0;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .formula-title {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .formula-code {
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+    h2 {
+      font-size: 1.45rem;
+      color: #1e293b;
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+    }
+    .tip-card {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      padding: 1.2rem;
+      border-radius: 6px;
+      margin: 1.5rem 0;
+    }
+    .tip-title {
+      font-weight: 700;
+      color: #15803d;
+      margin-bottom: 0.3rem;
+    }
+    .exam-pitfalls {
+      background: #fff1f2;
+      border-left: 4px solid #f43f5e;
+      padding: 1.2rem;
+      border-radius: 6px;
+      margin: 1.5rem 0;
+    }
+    .pitfall-title {
+      font-weight: 700;
+      color: #be123c;
+      margin-bottom: 0.3rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-tag">Bachillerato Internacional · Grupo 5 (STEM)</div>
+  <h1>Matemáticas: Análisis y Enfoques (AA SL/HL)</h1>
+  <div class="author-bar">Compilado por <strong>theloser</strong> // Themachinecorner</div>
+
+  <div class="tip-card">
+    <div class="tip-title">⚡ Enfoque Examen Mayo / Noviembre:</div>
+    <p>El 70% de los puntos perdidos en la Prueba 1 (sin calculadora) se deben a <strong>errores algebraicos básicos</strong> de secundaria (signos negativos, factorización y simplificación de fracciones), no a falta de entendimiento de cálculo.</p>
+  </div>
+
+  <h2>1. Núcleo de Cálculo Diferencial e Integral</h2>
+  
+  <div class="formula-box">
+    <div class="formula-title">Regla de la Cadena & Derivación Implícita</div>
+    <div class="formula-code">dy/dx = (dy/du) * (du/dx) &emsp;|&emsp; d/dx [f(y)] = f'(y) * (dy/dx)</div>
+  </div>
+
+  <div class="formula-box">
+    <div class="formula-title">Integración por Partes</div>
+    <div class="formula-code">∫ u * v' dx = u * v - ∫ u' * v dx</div>
+  </div>
+
+  <div class="formula-box">
+    <div class="formula-title">Volumen de Revolución (Alrededor del eje X)</div>
+    <div class="formula-code">V = π ∫ [f(x)]² dx &emsp;(desde a hasta b)</div>
+  </div>
+
+  <h2>2. Trucos para la Prueba 2 (Con Calculadora Gráfica GDC)</h2>
+  <ul>
+    <li><strong>Nunca resuelvas analíticamente lo que tu GDC puede graficar:</strong> Si te piden encontrar los puntos de intersección o raíces, traza ambas funciones en la calculadora y usa la función <code>G-Solv / Intersect</code>. Ahorras 5 minutos vitales.</li>
+    <li><strong>Verifica el modo Radianes:</strong> El 99% de las preguntas de trigonometría y cálculo en el IB asumen que tu calculadora está en <strong>Radianes</strong>. Si la tienes en Grados (Deg), obtendrás 0 puntos en derivadas trigonométricas.</li>
+  </ul>
+
+  <h2>3. Errores Fatales en Exámenes Oficiales</h2>
+  <div class="exam-pitfalls">
+    <div class="pitfall-title">⚠️ No olvidar la constante de integración (+ C):</div>
+    <p>En preguntas de integrales indefinidas, olvidar poner <code>+ C</code> te costará la nota de respuesta (A mark). No dejes puntos gratis sobre la mesa.</p>
+  </div>
+
+  <div class="exam-pitfalls">
+    <div class="pitfall-title">⚠️ Criterio de 3 Cifras Significativas:</div>
+    <p>A menos que el enunciado especifique lo contrario (o pida valores exactos como √3 o π), todas las respuestas numéricas en el IB deben expresarse exactamente a <strong>3 cifras significativas</strong>.</p>
+  </div>
+</body>
+</html>

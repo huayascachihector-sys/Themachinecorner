@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Themachinecorner // Hub de Excelencia Académica (Secundaria, Bachillerato & IB)</title>
+  <meta name="description" content="Themachinecorner: Plataforma de aprendizaje futurista y recursos académicos definitivos para Secundaria, Bachillerato, Bachillerato Internacional (IB) y Preparación Universitaria. Una iniciativa por theloser.">
+  <meta name="keywords" content="Themachinecorner, theloser, Bachillerato Internacional, IB, Secundaria, Bachillerato, Excelencia Académica, Cursos, Recursos de Estudio">
+  <meta name="author" content="theloser">
+  
+  <!-- Favicon & Icons -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google Fonts: Orbitron, Space Grotesk, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Futuristic Cyber Grid Background with Glowing Blobs -->
+  <div class="cyber-bg">
+    <div class="grid-layer"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+  </div>
+
+  <!-- Main HUD Shell -->
+  <div class="hud-wrapper">
+    <!-- Top Nav Header -->
+    <header class="futuristic-header">
+      <div class="header-left">
+        <div class="terminal-badge">
+          <span class="status-dot pulse"></span>
+          <span class="badge-text">SYS.ONLINE // v2.6</span>
+        </div>
+        <div class="brand-container" id="nav-brand-btn" role="button" tabindex="0">
+          <div class="logo-glitch-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="20,2 38,12 38,28 20,38 2,28 2,12" stroke="url(#brandGrad)" stroke-width="2.5" fill="rgba(0, 243, 255, 0.05)"/>
+              <path d="M12 20L18 26L28 14" stroke="#00f3ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="brandGrad" x1="0" y1="0" x2="40" y2="40">
+                  <stop stop-color="#00f3ff"/>
+                  <stop offset="0.5" stop-color="#b026ff"/>
+                  <stop offset="1" stop-color="#ff007b"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-text-group">
+            <h1 class="brand-title">THEMACHINE<span class="highlight-neon">CORNER</span></h1>
+            <p class="brand-subtitle">Iniciativa de Excelencia Académica · por <span class="creator-tag">theloser</span></p>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav-links" id="main-nav">
+        <button class="nav-btn active" data-view="home">
+          <span class="nav-icon">✦</span> Inicio
+        </button>
+        <button class="nav-btn" data-view="ib-zone">
+          <span class="nav-icon">◈</span> Zona IB
+        </button>
+        <button class="nav-btn" data-view="courses">
+          <span class="nav-icon">▤</span> Cursos & Niveles
+        </button>
+        <button class="nav-btn" data-view="viewer">
+          <span class="nav-icon">❖</span> Visor de Materiales
+          <span class="pill-badge">HTML HUB</span>
+        </button>
+        <button class="nav-btn" data-view="tools">
+          <span class="nav-icon">⚙</span> Herramientas
+        </button>
+        <button class="nav-btn" data-view="manifesto">
+          <span class="nav-icon">◉</span> theloser
+        </button>
+      </nav>
+
+      <div class="header-right">
+        <button class="action-btn glow-cyan" id="quick-upload-btn" title="Subir o abrir tus archivos HTML para leerlos">
+          <span class="btn-icon">⚡</span>
+          <span>Integrar HTML</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="content-viewport" id="main-content">
+      
+      <!-- ================= SECTION 1: HOME ================= -->
+      <section id="view-home" class="view-section active">
+        <!-- Hero Section -->
+        <div class="hero-block">
+          <div class="hero-tag">
+            <span class="glitch-symbol">///</span> MÁQUINA DE RENDIMIENTO COGNITIVO
+          </div>
+          <h2 class="hero-heading">
+            Domina <span class="text-gradient">Secundaria, Bachillerato & IB</span> sin piedad.
+          </h2>
+          <p class="hero-desc">
+            Themachinecorner es el ecosistema de estudio definitivo diseñado por y para estudiantes. 
+            Teoría condensada, guías de examen, materiales interactivos y herramientas de alto impacto 
+            para pasar del promedio a la cima académica.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn-primary glow-cyan" onclick="window.switchView('ib-zone')">
+              <span>Explorar Zona IB (Bachillerato Internacional)</span>
+              <span class="arrow">→</span>
+            </button>
+            <button class="btn-secondary" onclick="window.switchView('viewer')">
+              <span>Visor de Documentos HTML</span>
+              <span class="badge-mini">Tus archivos</span>
+            </button>
+            <button class="btn-ghost" onclick="window.switchView('tools')">
+              <span>Calculadora IB /45 & Pomodoro</span>
+            </button>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-num">IB / 45</span>
+              <span class="metric-label">Enfoque Máxima Puntuación</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">100%</span>
+              <span class="metric-label">Didáctico, Abierto & Sin Relleno</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">HTML HUB</span>
+              <span class="metric-label">Tus Materiales Integrables</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">theloser</span>
+              <span class="metric-label">Desarrollado en Trinchera Real</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillars Grid -->
+        <div class="section-divider">
+          <span class="divider-line"></span>
+          <span class="divider-text">RUTAS DE EXCELENCIA</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <div class="cards-grid">
+          <div class="futuristic-card" onclick="window.switchView('ib-zone')">
+            <div class="card-glow-edge"></div>
+            <div class="card-header-icon ib-glow">IB</div>
+            <h3>Bachillerato Internacional (IB)</h3>
+            <p>Guías para NM y NS: Matemáticas (AA/AI), Física, Química, Biología, Historia, además de TOK (Teoría del Conocimiento), Monografía (EE) y CAS.</p>
+            <div class="card-footer-meta">
+              <span class="tag">Diplomado IB</span>
+              <span class="action-link">Entrar →</span>
+            </div>
+          </div>
+
+          <div class="futuristic-card" onclick="window.switchView('courses', 'bachillerato')">
+            <div class="card-glow-edge"></div>
+            <div class="card-header-icon bach-glow">BAC</div>
+            <h3>Bachillerato & Pruebas Preuniversitarias</h3>
+            <p>Cálculo, Física Clásica y Moderna, Redacción Académica, Química Orgánica y resolución de problemas de exámenes de admisión universitaria.</p>
+            <div class="card-footer-meta">
+              <span class="tag">Nivel Avanzado</span>
+              <span class="action-link">Entrar →</span>
+            </div>
+          </div>
+
+          <div class="futuristic-card" onclick="window.switchView('courses', 'secundaria')">
+            <div class="card-glow-edge"></div>
+            <div class="card-header-icon sec-glow">SEC</div>
+            <h3>Secundaria & Bases Fundamentales</h3>
+            <p>Fundamentos matemáticos inquebrantables, método científico, técnicas de comprensión lectora rápida y razonamiento lógico para arrasar en tus años clave.</p>
+            <div class="card-footer-meta">
+              <span class="tag">Bases Sólidas</span>
+              <span class="action-link">Entrar →</span>
+            </div>
+          </div>
+
+          <div class="futuristic-card" onclick="window.switchView('viewer')">
+            <div class="card-glow-edge"></div>
+            <div class="card-header-icon doc-glow">HTML</div>
+            <h3>Tus Archivos & Documentos IB</h3>
+            <p>Visualiza tus archivos HTML interactivos de manera nativa dentro del sistema con modo lectura futurista, pantalla completa y buscador integrado.</p>
+            <div class="card-footer-meta">
+              <span class="tag">Lector Integrado</span>
+              <span class="action-link">Abrir Visor →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- How to integrate user's HTML banner -->
+        <div class="integration-banner">
+          <div class="banner-badge">CARACTERÍSTICA DESTACADA</div>
+          <div class="banner-content">
+            <div class="banner-text">
+              <h3>¿Tienes archivos HTML con tus apuntes o guías de IB?</h3>
+              <p>Themachinecorner viene preparado para incrustar tus HTMLs. Puedes subirlos desde tu navegador con arrastrar y soltar, o colocarlos en la carpeta <code>materials/ib/</code> del proyecto para que se sincronicen solos.</p>
+            </div>
+            <button class="btn-primary glow-cyan" onclick="window.switchView('viewer')">
+              <span>Probar Lector de HTMLs</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 2: ZONA IB ================= -->
+      <section id="view-ib-zone" class="view-section">
+        <div class="section-intro">
+          <div class="intro-badge">PROGRAMA DEL DIPLOMA IB</div>
+          <h2>Zona de Mando: Bachillerato Internacional</h2>
+          <p>Estrategias probadas, desgloses de criterios de evaluación, plantillas de evaluación interna y preparación para exámenes Mayo/Noviembre.</p>
+        </div>
+
+        <!-- IB Categories Tabs -->
+        <div class="filter-bar">
+          <button class="filter-chip active" data-ib-filter="all">Todas las Áreas</button>
+          <button class="filter-chip" data-ib-filter="core">El Núcleo (TOK, EE, CAS)</button>
+          <button class="filter-chip" data-ib-filter="stem">Ciencias & Matemáticas</button>
+          <button class="filter-chip" data-ib-filter="humanities">Individuos & Sociedades</button>
+          <button class="filter-chip" data-ib-filter="guides">Guías Oficiales & Tips</button>
+        </div>
+
+        <div class="ib-resources-grid" id="ib-cards-container">
+          <!-- Populated dynamically and statically -->
+        </div>
+
+        <!-- IB Calculator Shortcut Banner -->
+        <div class="ib-calculator-teaser">
+          <div class="teaser-info">
+            <h4>Calcula tu puntaje IB sobre 45 puntos</h4>
+            <p>Calcula tus 6 asignaturas (escala 1 a 7) más la matriz de puntos TOK + Monografía (hasta 3 puntos extra). Conoce si alcanzas el diploma con honores.</p>
+          </div>
+          <button class="btn-secondary" onclick="window.switchView('tools')">
+            <span>Abrir Calculadora IB 45</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 3: CURSOS Y NIVELES ================= -->
+      <section id="view-courses" class="view-section">
+        <div class="section-intro">
+          <div class="intro-badge">CATÁLOGO ACADÉMICO</div>
+          <h2>Ruta Didáctica: Secundaria hasta Universidad</h2>
+          <p>Selecciona tu nivel actual y accede al árbol de destrezas indispensables para destacar sin quemarte las pestañas.</p>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div class="courses-toolbar">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="course-search-input" placeholder="Buscar materia, tema o concepto (ej. Cálculo, TOK, Mecánica...)" autocomplete="off">
+            <button id="clear-search-btn" class="clear-btn" style="display: none;">✕</button>
+          </div>
+
+          <div class="level-tabs">
+            <button class="level-tab active" data-level="all">Todos</button>
+            <button class="level-tab" data-level="secundaria">Secundaria</button>
+            <button class="level-tab" data-level="bachillerato">Bachillerato</button>
+            <button class="level-tab" data-level="ib">IB Diploma</button>
+            <button class="level-tab" data-level="universidad">Universidad Prep</button>
+          </div>
+        </div>
+
+        <div class="course-list-container" id="courses-container">
+          <!-- Rendered dynamically -->
+        </div>
+      </section>
+
+      <!-- ================= SECTION 4: VISOR DE MATERIALES HTML ================= -->
+      <section id="view-viewer" class="view-section">
+        <div class="section-intro">
+          <div class="intro-badge">INTEGRADOR NATIVO</div>
+          <h2>Visor de Materiales & HTMLs</h2>
+          <p>Incrusta y visualiza cualquier archivo HTML de apuntes, libros interactivos o guías de IB directamente dentro de la interfaz de Themachinecorner.</p>
+        </div>
+
+        <div class="viewer-layout">
+          <!-- Sidebar: Material list + file uploader -->
+          <div class="viewer-sidebar">
+            <div class="sidebar-box">
+              <div class="box-title">
+                <span>📁 BIBLIOTECA DE MATERIALES</span>
+                <span class="count-badge" id="library-count">20 listos</span>
+              </div>
+              <p class="box-subtitle">Selecciona un módulo o carga tus propios HTMLs:</p>
+
+              <!-- Search in materials library -->
+              <div class="mat-search-box">
+                <span class="mat-search-icon">🔍</span>
+                <input type="text" id="mat-search-input" class="mat-search-input" placeholder="Filtrar temas (ej: Derivación, Hitler...)" autocomplete="off">
+              </div>
+
+              <!-- Subject filter pills -->
+              <div class="mat-filter-pills" id="mat-filter-pills">
+                <button class="mat-pill active" data-cat="all">Todos</button>
+                <button class="mat-pill" data-cat="math">Matemáticas (17)</button>
+                <button class="mat-pill" data-cat="history">Historia (3)</button>
+                <button class="mat-pill" data-cat="core">Núcleo & Tips</button>
+              </div>
+
+              <!-- Upload Zone -->
+              <div class="drop-zone" id="html-drop-zone">
+                <input type="file" id="html-file-input" accept=".html,.htm" multiple style="display: none;">
+                <div class="drop-icon">⚡</div>
+                <div class="drop-text">
+                  <strong>Arrastra nuevos HTMLs aquí</strong>
+                  <span>o haz clic para explorar tu PC</span>
+                </div>
+              </div>
+
+              <!-- List of available documents -->
+              <div class="materials-list" id="materials-list">
+                <!-- Injected via JavaScript -->
+              </div>
+
+              <div class="integration-help-note">
+                <div class="note-header">
+                  <span class="note-icon">💡</span>
+                  <strong>Módulos integrados con éxito</strong>
+                </div>
+                <p>Tus 17 módulos de Matemáticas y guías de Historia ya están enlazados. Puedes seguir agregando más archivos en:</p>
+                <code>materials/ib/</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Viewer Display Frame -->
+          <div class="viewer-main-frame">
+            <div class="viewer-top-toolbar">
+              <div class="doc-info">
+                <span class="doc-badge" id="viewer-doc-badge">DOC_ACTIVO</span>
+                <span class="doc-title-text" id="viewer-doc-title">Guía de Matemáticas: Análisis y Enfoques (IB)</span>
+              </div>
+
+              <div class="viewer-controls">
+                <button class="v-btn" id="btn-fullscreen-doc" title="Pantalla completa">⛶ Pantalla Completa</button>
+                <button class="v-btn" id="btn-open-newtab" title="Abrir en pestaña nueva">↗ Abrir en Nueva Pestaña</button>
+                <button class="v-btn" id="btn-reload-doc" title="Recargar">↻</button>
+              </div>
+            </div>
+
+            <!-- Frame Container -->
+            <div class="frame-container" id="frame-container">
+              <iframe id="doc-iframe" sandbox="allow-scripts allow-same-origin allow-popups" title="Visualizador de material"></iframe>
+              <div class="frame-empty-state" id="frame-empty-state" style="display: none;">
+                <div class="empty-icon">📂</div>
+                <h3>Ningún documento cargado</h3>
+                <p>Selecciona un material del menú izquierdo o arrastra tu archivo HTML.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 5: HERRAMIENTAS DE ESTUDIO ================= -->
+      <section id="view-tools" class="view-section">
+        <div class="section-intro">
+          <div class="intro-badge">BÚNKER DE PRODUCTIVIDAD</div>
+          <h2>Herramientas de Alto Rendimiento</h2>
+          <p>Herramientas tácticas creadas para estudiar con máxima retención, calcular tus metas y gestionar tus sesiones de estudio.</p>
+        </div>
+
+        <div class="tools-grid">
+          <!-- Tool 1: Calculadora IB /45 -->
+          <div class="tool-panel">
+            <div class="panel-header">
+              <div class="panel-tag">CALCULADORA OFICIAL</div>
+              <h3>Simulador de Puntos IB Diploma (/45)</h3>
+              <p>Ingresa tus 6 asignaturas estimadas (1 a 7) y tus calificaciones en TOK y Monografía (EE) para calcular tu puntaje final y verificar si obtienes el diploma.</p>
+            </div>
+
+            <div class="ib-calculator-body">
+              <div class="calc-subjects-grid">
+                <div class="calc-row">
+                  <label>1. Estudios de Lengua y Literatura:</label>
+                  <select class="calc-select" id="calc-sub-1">
+                    <option value="7">Nivel 7 (Excelente)</option>
+                    <option value="6" selected>Nivel 6 (Muy Bueno)</option>
+                    <option value="5">Nivel 5 (Bueno)</option>
+                    <option value="4">Nivel 4 (Aceptable)</option>
+                    <option value="3">Nivel 3</option>
+                    <option value="2">Nivel 2</option>
+                    <option value="1">Nivel 1</option>
+                  </select>
+                </div>
+
+                <div class="calc-row">
+                  <label>2. Adquisición de Lenguas:</label>
+                  <select class="calc-select" id="calc-sub-2">
+                    <option value="7" selected>Nivel 7 (Excelente)</option>
+                    <option value="6">Nivel 6 (Muy Bueno)</option>
+                    <option value="5">Nivel 5 (Bueno)</option>
+                    <option value="4">Nivel 4 (Aceptable)</option>
+                    <option value="3">Nivel 3</option>
+                    <option value="2">Nivel 2</option>
+                    <option value="1">Nivel 1</option>
+                  </select>
+                </div>
+
+                <div class="calc-row">
+                  <label>3. Individuos y Sociedades:</label>
+                  <select class="calc-select" id="calc-sub-3">
+                    <option value="7">Nivel 7 (Excelente)</option>
+                    <option value="6" selected>Nivel 6 (Muy Bueno)</option>
+                    <option value="5">Nivel 5 (Bueno)</option>
+                    <option value="4">Nivel 4 (Aceptable)</option>
+                    <option value="3">Nivel 3</option>
+                    <option value="2">Nivel 2</option>
+                    <option value="1">Nivel 1</option>
+                  </select>
+                </div>
+
+                <div class="calc-row">
+                  <label>4. Ciencias Experimentales:</label>
+                  <select class="calc-select" id="calc-sub-4">
+                    <option value="7">Nivel 7 (Excelente)</option>
+                    <option value="6">Nivel 6 (Muy Bueno)</option>
+                    <option value="5" selected>Nivel 5 (Bueno)</option>
+                    <option value="4">Nivel 4 (Aceptable)</option>
+                    <option value="3">Nivel 3</option>
+                    <option value="2">Nivel 2</option>
+                    <option value="1">Nivel 1</option>
+                  </select>
+                </div>
+
+                <div class="calc-row">
+                  <label>5. Matemáticas (AA / AI):</label>
+                  <select class="calc-select" id="calc-sub-5">
+                    <option value="7">Nivel 7 (Excelente)</option>
+                    <option value="6" selected>Nivel 6 (Muy Bueno)</option>
+                    <option value="5">Nivel 5 (Bueno)</option>
+                    <option value="4">Nivel 4 (Aceptable)</option>
+                    <option value="3">Nivel 3</option>
+                    <option value="2">Nivel 2</option>
+                    <option value="1">Nivel 1</option>
+                  </select>
+                </div>
+
+                <div class="calc-row">
+                  <label>6. Asignatura Electiva o Artes:</label>
+                  <select class="calc-select" id="calc-sub-6">
+                    <option value="7">Nivel 7 (Excelente)</option>
+                    <option value="6" selected>Nivel 6 (Muy Bueno)</option>
+                    <option value="5">Nivel 5 (Bueno)</option>
+                    <option value="4">Nivel 4 (Aceptable)</option>
+                    <option value="3">Nivel 3</option>
+                    <option value="2">Nivel 2</option>
+                    <option value="1">Nivel 1</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Matriz TOK + EE -->
+              <div class="calc-core-box">
+                <div class="core-box-title">Matriz del Núcleo (TOK + Monografía)</div>
+                <div class="core-selectors">
+                  <div class="core-field">
+                    <label>Calificación TOK (Teoría del Conocimiento):</label>
+                    <select class="calc-select" id="calc-tok">
+                      <option value="A" selected>A (Excelente)</option>
+                      <option value="B">B (Bueno)</option>
+                      <option value="C">C (Satisfactorio)</option>
+                      <option value="D">D (Mediocre)</option>
+                      <option value="E">E (Insuficiente - Condición reprobatoria)</option>
+                    </select>
+                  </div>
+                  <div class="core-field">
+                    <label>Calificación Monografía (EE):</label>
+                    <select class="calc-select" id="calc-ee">
+                      <option value="A">A (Excelente)</option>
+                      <option value="B" selected>B (Bueno)</option>
+                      <option value="C">C (Satisfactorio)</option>
+                      <option value="D">D (Mediocre)</option>
+                      <option value="E">E (Insuficiente - Condición reprobatoria)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Result Display -->
+              <div class="calc-result-panel">
+                <div class="result-number-block">
+                  <span class="result-label">Puntaje Proyectado</span>
+                  <div class="score-display">
+                    <span id="calc-total-score">38</span>
+                    <span class="score-max">/ 45</span>
+                  </div>
+                  <div class="score-breakdown">
+                    <span id="calc-subjects-sum">35</span> pts materias + <span id="calc-bonus-sum">3</span> pts matriz TOK/EE
+                  </div>
+                </div>
+                <div class="result-status-block" id="calc-status-card">
+                  <div class="status-title" id="calc-status-title">DIPLOMA ALCANZADO CON ÉXITO</div>
+                  <div class="status-desc" id="calc-status-desc">Cumples ampliamente con el mínimo de 24 puntos y los requisitos del núcleo. Excelente rango para universidades top a nivel mundial.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tool 2: Overclock Cyber Pomodoro -->
+          <div class="tool-panel">
+            <div class="panel-header">
+              <div class="panel-tag">ENFOQUE NEURONAL</div>
+              <h3>Cronómetro Pomodoro "Overclock"</h3>
+              <p>Sesiones de estudio ultra enfocadas con técnica 25/5 o modo Deep Work 50/10 para evitar la dispersión mental.</p>
+            </div>
+
+            <div class="pomodoro-box">
+              <div class="pomo-modes">
+                <button class="pomo-mode-btn active" data-time="1500" data-label="ENFOQUE 25M">Enfoque 25m</button>
+                <button class="pomo-mode-btn" data-time="3000" data-label="DEEP WORK 50M">Deep Work 50m</button>
+                <button class="pomo-mode-btn" data-time="300" data-label="DESCANSO CORTO 5M">Pausa 5m</button>
+                <button class="pomo-mode-btn" data-time="900" data-label="DESCANSO LARGO 15M">Pausa 15m</button>
+              </div>
+
+              <div class="timer-display-wrap">
+                <div class="timer-circle-glow">
+                  <div class="timer-digits" id="timer-digits">25:00</div>
+                  <div class="timer-state" id="timer-state">LISTO PARA INICIAR</div>
+                </div>
+              </div>
+
+              <div class="pomo-controls">
+                <button class="btn-primary glow-cyan" id="pomo-start-btn">INICIAR SESIÓN</button>
+                <button class="btn-secondary" id="pomo-reset-btn">REINICIAR</button>
+              </div>
+
+              <div class="study-tips-box">
+                <div class="tip-title">⚡ Regla de Oro de theloser:</div>
+                <p>Durante la sesión: 0 pestañas de redes sociales, teléfono en otra habitación, y una libreta de notas para apuntar cualquier idea distractora y continuar estudiando sin romper el flujo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 6: MANIFIESTO THELOSER ================= -->
+      <section id="view-manifesto" class="view-section">
+        <div class="manifesto-card">
+          <div class="manifesto-header">
+            <div class="avatar-box">
+              <div class="hacker-avatar">TL</div>
+              <div class="avatar-details">
+                <h3>theloser</h3>
+                <span class="alias-title">Estudiante & Arquitecto de Themachinecorner</span>
+              </div>
+            </div>
+            <div class="manifesto-badge">MANIFIESTO V1.0</div>
+          </div>
+
+          <div class="manifesto-body">
+            <blockquote>
+              "Me llaman <strong>theloser</strong>, pero en el juego académico la verdadera derrota es memorizar sin entender, rendirse ante un examen o creer que no eres capaz de competir con los mejores del mundo."
+            </blockquote>
+
+            <h4>¿Por qué creé Themachinecorner?</h4>
+            <p>
+              Durante mi camino por la secundaria y el rigor implacable del <strong>Bachillerato Internacional (IB)</strong>, me di cuenta de una verdad dolorosa: 
+              la mayoría del material disponible en internet es aburrido, disperso o está detrás de muros de pago absurdos. 
+              Los profesores explican con diapositivas de hace una década y los estudiantes nos quedamos solos intentando descifrar qué diablos pide un criterio de evaluación o cómo resolver un problema complejo de física o cálculo.
+            </p>
+            <p>
+              <strong>Themachinecorner</strong> nació como mi búnker personal: el rincón donde condensar cada truco, cada guía, cada documento HTML y cada herramienta que me salvó la vida académica. 
+              Decidí no guardármelo para mí. Este sitio es para ti, que estás pasando horas frente a la pantalla preparando tu monografía, tus exámenes de secundaria o tu pase a la universidad.
+            </p>
+
+            <div class="principles-grid">
+              <div class="principle-card">
+                <div class="p-num">01</div>
+                <h5>Comprensión Activa, No Memorización</h5>
+                <p>Aprende el concepto nuclear. Si sabes deducir la fórmula, nunca la olvidarás en el examen.</p>
+              </div>
+              <div class="principle-card">
+                <div class="p-num">02</div>
+                <h5>Hackea los Criterios</h5>
+                <p>En el IB y en la universidad te evalúan por rúbricas. Dale al examinador exactamente lo que pide el criterio.</p>
+              </div>
+              <div class="principle-card">
+                <div class="p-num">03</div>
+                <h5>Sistemas sobre Fuerza de Voluntad</h5>
+                <p>No confíes en tus ganas de estudiar. Confía en tu entorno, tus herramientas y tus sesiones medidas.</p>
+              </div>
+            </div>
+
+            <div class="manifesto-cta">
+              <p><strong>¿Quieres colaborar o tienes dudas sobre cómo sumar tus archivos?</strong></p>
+              <p>Explora el visor de documentos, pon a prueba tus conocimientos y que comience la conquista académica.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Futuristic Terminal Footer -->
+    <footer class="futuristic-footer">
+      <div class="footer-left">
+        <span class="neon-brand">THEMACHINE<span class="highlight-neon">CORNER</span></span>
+        <span class="separator">|</span>
+        <span class="initiative-note">Iniciativa académica creada por <strong>theloser</strong></span>
+      </div>
+      <div class="footer-center">
+        <span class="sys-code">STATUS: RECURSOS_DISPONIBLES // IB_DIPLOMA_READY</span>
+      </div>
+      <div class="footer-right">
+        <span>© 2026 THEMACHINE CORNER · Forjado para la excelencia</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Global Modal for HTML Upload / Info -->
+  <div class="modal-overlay" id="upload-modal" style="display: none;">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-tag">INTEGRADOR DE HTMLS</div>
+        <button class="modal-close-btn" id="modal-close-btn">✕</button>
+      </div>
+      <div class="modal-body">
+        <h3>¿Cómo integrar tus archivos HTML a Themachinecorner?</h3>
+        <p>Tienes dos formas sencillas de incorporar tus materiales de IB y apuntes personales:</p>
+        
+        <div class="modal-options-grid">
+          <div class="modal-option-card">
+            <div class="opt-num">MÉTODO 1 (Inmediato)</div>
+            <h4>Cargar desde el Visor Web</h4>
+            <p>Ve a la sección <strong>"Visor de Materiales"</strong> y suelta tus archivos <code>.html</code> en la zona de arrastre. Podrás leerlos, ampliarlos a pantalla completa y revisarlos al instante sin configurar nada.</p>
+            <button class="btn-primary glow-cyan" onclick="window.closeUploadModal(); window.switchView('viewer');">
+              Ir al Visor Ahora
+            </button>
+          </div>
+
+          <div class="modal-option-card">
+            <div class="opt-num">MÉTODO 2 (Permanente)</div>
+            <h4>Colocarlos en la Carpeta Local</h4>
+            <p>Guarda tus archivos HTML en la carpeta de este proyecto:</p>
+            <pre><code>c:\Users\Alumno\Desktop\Themachinecorner\materials\ib\</code></pre>
+            <p>Quedarán guardados en tu computadora y puedes abrirlos en cualquier momento o pedírmelo para dejarlos anclados en el menú.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
